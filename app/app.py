@@ -1,5 +1,5 @@
 from flask import render_template, Flask
-from application.controller.controllers import get_episodes
+from app.controller.controllers import get_episodes
 
 app = Flask(__name__)
 
