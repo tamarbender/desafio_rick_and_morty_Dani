@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodes</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Episodes</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Characters</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="title-container">
+        <div class="circle"></div>
+        <h1>List of Episodes</h1>
+    </div>
+    <table>
+        <tr>
+            <th>NAME</th>
+            <th>AIR DATE</th>
+            <th>EPISODE CODE</th>
+        </tr>
+        {% for episode in episodes %}
+        <tr>
+            <td>{{ episode.name }}</td>
+            <td>{{ episode.air_date }}</td>
+            <td><a href="/episode/{{ episode.id }}" class="episode-code">{{ episode.episode }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+<footer>
+    <div class="container">
+        <p>&copy; Womakerscode squad Mae C. Jemison.</p>
+    </div>
+</footer>
+</body>
+</html>
