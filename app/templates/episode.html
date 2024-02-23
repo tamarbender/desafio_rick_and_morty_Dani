@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episode Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style_episode.css">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/episodes">Episódio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dimensões</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Personagens</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        <h1>Detalhes do Episódio</h1>
+        <div>
+            <p><strong>Nome:</strong> {{ episode.name }}</p>
+            <p><strong>Lançamento:</strong> {{ episode.air_date }}</p>
+            <p><strong>Temporada:</strong> {{ episode.season }}</p>
+            <p><strong>Episódio:</strong> {{ episode.episode }}</p>
+            <br>
+            <h2>Personagens no Episódio</h2>
+            <br>
+            <div class="character-grid">
+                {% for character in character_data %}
+                <div class="character-item">
+                    <img src="{{ character.image }}" alt="{{ character.name }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

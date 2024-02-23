@@ -17,7 +17,7 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Episodes</a>
+                        <a class="nav-link" href="/episodes">Episodes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Locations</a>
@@ -49,7 +49,7 @@
                 <tr>
                     <td>{{ episode.name }}</td>
                     <td>{{ episode.air_date }}</td>
-                    <td><a href="/episode/{{ episode.id }}" class="episode-code">{{ episode.episode }}</a></td>
+                    <td><a href="{{ url_for('episode', id=episode.id) }}" class="episode-link">{{ episode.episode }}</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

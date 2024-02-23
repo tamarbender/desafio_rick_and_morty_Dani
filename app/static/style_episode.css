@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #a588be, #8531ac, #5e0fa3);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: "Orbitron", Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.episode-details {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.nav-link:hover,
+a:hover {
+    color: #4d156b;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4d156b;
+    color: #fff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    background-color: #8531ac;
+}
+
+.character-image {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+}
+
+header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+.mt-4 {
+    overflow-x: auto;
+    max-width: 100%;
+    border-radius: 50px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    text-align: center;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.character-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.character-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 0, 200);
+    box-shadow: 0 0 10px rgb(183, 0, 255);
+}
+
+
