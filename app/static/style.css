@@ -1,101 +1,88 @@
-body {
-    font-family: "Orbitron", sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-image: url('./images/rick_and_morty_background.jpg');
-    background-size: cover;
-    background-position: center;
+    box-sizing: border-box;
 }
 
-.title-container {
-    text-align: center;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-h1 {
+body {
+    background: linear-gradient(135deg, #a588be, #8531ac, #5e0fa3);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: "Orbitron", Arial, sans-serif;
     color: #fff;
-    padding: 20px;
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: rgba(57, 62, 70, 0.8);
-    display: inline-block;
-    border-radius: 100px;
+    margin: 0;
+    padding: 0;
 }
 
-footer {
-    background-color: rgba(57, 62, 70, 0.8);
-    color: #fff;
-    padding: 20px 0;
-    width: 100%;
-    bottom: 0; 
-    left: 0; 
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.character {
+    position: fixed;
+    top: 50%;
+    max-width: 15%;
+    height: auto;
+}
+
+.character-left {
+    left: 20px;
+}
+
+.character-right {
+    right: 20px;
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-table {
-    border-collapse: collapse;
-    width: 80%;
-    margin: 20px auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: #393e46;
-    color: #fff;
-}
-
-th {
-    background-color: #393e46;
-    color: #fff;
-    padding: 12px;
-    text-align: left;
-}
-
-td {
-    border-bottom: 1px solid #222;
-    padding: 12px;
-}
-
-tr:nth-child(even) {
-    background-color: #222;
-}
-
-tr:nth-child(odd) {
-    background-color: #393e46;
+    width: 70%;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    text-align: center;
 }
 
 a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
 }
 
+.nav-link:hover,
 a:hover {
-    color: #ffcb57;
+    color: #4d156b;
+}
+
+header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+nav {
+    margin-top: 20px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    text-align: center;
 }
 
 nav ul li {
+    display: inline-block;
     margin-right: 20px;
-}
-
-header {
-    background-color: rgba(57, 62, 70, 0.8);
-    padding: 10px 0;
 }
 
 nav ul li a {
@@ -104,11 +91,80 @@ nav ul li a {
     font-size: 18px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+nav ul li a:hover {
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+th, td {
+    border: 1px solid #fff;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4d156b;
+}
+
+tr:nth-child(even) {
+    background-color: #333;
+}
+
+tr:hover {
+    background-color: #555;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4d156b;
+    color: #fff;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #4d156b;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #4d156b;
+    border-color: #4d156b;
+    color: #fff;
+}
+
+.mt-4 {
+    overflow-x: auto;
+    max-width: 100%;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
     }
-    to {
-        opacity: 1;
+
+    .character {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 95%;
     }
 }
