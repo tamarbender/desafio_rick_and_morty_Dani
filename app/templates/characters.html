@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Episode Details</title>
+    <title>Locations</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/style_episode.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
 </head>
 <body>
@@ -17,35 +17,32 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/episodes">Episódio</a>
+                        <a class="nav-link" href="/episodes">Episodes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dimensões</a>
+                        <a class="nav-link" href="/locations">Locations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Personagens</a>
+                        <a class="nav-link" href="#">Characters</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <div class="container mt-4">
-        <h1>Detalhes da Localização - {{ location.name }}</h1>
-        <div>
-            <p><strong>Nome:</strong> {{ location.name }}</p>
-            <p><strong>Type:</strong> {{ location.type }}</p>
-            <p><strong>Dimension:</strong> {{ location.dimension }}</p>
-            <br>
-            <h2>Residentes</h2>
-            <br>
-            <div class="character-grid">
-                {% for residents in residents_data %}
-                <div class="character-item">
-                    <img src="{{ residents.image }}" alt="{{ residents.name }}">
-                    <p> {{ residents.name }} </p>
-                </div>
-                {% endfor %}
-            </div>
+        <div class="title-container">
+            <h1>List of Personagens</h1>
+        </div>
+        <img src="../static/images/rick.png" alt="Rick" class="character character-left">
+        <img src="../static/images/morty.png" alt="Morty" class="character character-right">
+        <div class="row">
+            {% for character in characters %}
+            <div class="col-sm-3 col-6">
+                <img src="{{ character.image }}" alt="{{ character.name }}" class="img-fluid img-thumbnail"/>
+                <h3>{{ character.name }}</h3>
+             </div>
+            {% endfor %}
         </div>
     </div>
 </body>

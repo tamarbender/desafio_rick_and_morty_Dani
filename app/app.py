@@ -1,11 +1,12 @@
 from flask import render_template, Flask, request
-from app.controller.controllers import get_episodes, get_episode_by_id
+from app.controller.controllers import get_episodes, get_episode_by_id, get_locations, get_location_by_id, get_list_characters_page
 import requests
 import concurrent.futures
 
 app = Flask(__name__)
 
 @app.route('/episodes')
+
 def episodes():
     page = request.args.get('page', 1, type=int)
     episodes, total_pages = get_episodes(page)
@@ -44,3 +45,24 @@ def get_character_data_single(character_url):
         }
     else:
         return None
+
+
+@app.route('/locations')
+def locations():
+    page = request.args.get('pages', 1, type=int)
+    locations, total_pages = get_locations(page)
+    return render_template('locations.html', locations=locations, current_page=page, total_pages=total_pages)
+
+@app.route('/location/<int:id>')
+def location(id):
+    location = get_location_by_id(id)
+    
+    residents_urls = location['residents']
+    residents_data = get_character_data(residents_urls)
+
+    return render_template('location.html', location=location, residents_data=residents_data)
+
+@app.route("/")
+def pageInicial():
+    response = get_list_characters_page()
+    return render_template('characters.html', characters=response)
