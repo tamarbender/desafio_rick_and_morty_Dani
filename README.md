@@ -77,6 +77,11 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+### Entre no diretório correto :D
+```
+cd app
+```
+
 ### Rode o Flask :D
 ```
 flask --app app run
