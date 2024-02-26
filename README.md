@@ -33,7 +33,7 @@ projeto/
 - Ana Paula Martins Braga | [apmbraga](https://github.com/apmbraga)
 - Angela Filomena | [anbaptista](https://github.com/anbaptista/)
 - Daniele Ferreira Galvão | [DanieleFG](https://github.com/DanieleFG)
-- Indhira Viana Freire
+- Indhira Viana Freire | [Indhira Viana](https://github.com/Indy-electro)
 - Manuele Maurício Lamenha
 - Millena Figueredo
 - Quesia De Araújo Santos | [quesia-araujo](https://github.com/quesia-araujo)
