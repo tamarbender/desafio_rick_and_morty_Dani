@@ -153,6 +153,15 @@ tr:hover {
     border-radius: 50px;
 }
 
+.icon_visualizar {
+    text-align: center;
+    width: 20px;
+}
+.location-link {
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 768px) {
     .container {
         width: 90%;
