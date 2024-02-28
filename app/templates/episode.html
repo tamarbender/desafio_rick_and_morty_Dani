@@ -9,26 +9,7 @@
     <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/episodes">Episódio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Dimensões</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Personagens</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    {% include 'header.html' %}
     <div class="container mt-4">
         <h1>Detalhes do Episódio</h1>
         <div>
@@ -41,9 +22,10 @@
             <br>
             <div class="character-grid">
                 {% for character in character_data %}
-                <div class="character-item">
-                    <img src="{{ character.image }}" alt="{{ character.name }}">
-                </div>
+                    <div class="character-item">
+                        <a class="page-link" href="{{ url_for('profile', id=character.id) }}"><img src="{{ character.image }}"></a>
+                        <p> {{ character.name }} </p>
+                    </div>
                 {% endfor %}
             </div>
         </div>

@@ -54,7 +54,7 @@ Valorizamos o trabalho em equipe e a criação de um ambiente cooperativo para g
 
 ### Clonar o repositório
 
-Clone o repositório do LolAnalytics, incluindo os submódulos, utilizando o seguinte comando:
+Clone o repositório utilizando o seguinte comando:
 
 ```
 git clone https://github.com/8b1tz/desafio_rick_and_morty
