@@ -35,7 +35,7 @@ projeto/
 - Daniele Ferreira Galvão | [DanieleFG](https://github.com/DanieleFG)
 - Indhira Viana Freire | [Indhira Viana](https://github.com/Indy-electro)
 - Manuele Maurício Lamenha
-- Millena Figueredo
+- Millena Figueredo | [MildePaula](https://github.com/MildePaula)
 - Quesia De Araújo Santos | [quesia-araujo](https://github.com/quesia-araujo)
 - Siomara Mota
 - Tamar Bender
