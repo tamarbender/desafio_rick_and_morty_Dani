@@ -33,13 +33,13 @@ body {
     height: auto;
 }
 
-.character-left {
-    left: 20px;
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 20px;
 }
 
-.character-right {
-    right: 20px;
-}
 
 .container {
     margin: 0 auto;

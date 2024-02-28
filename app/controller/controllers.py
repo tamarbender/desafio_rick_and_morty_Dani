@@ -1,3 +1,4 @@
+import concurrent.futures
 import json
 import urllib.request
 
@@ -48,3 +49,31 @@ def get_list_characters_page(id):
     characters_dict = json.loads(data)
 
     return characters_dict
+
+
+def get_character_data(character_urls):
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        future_to_url = {executor.submit(get_character_data_single, url): url for url in character_urls}
+        character_data = []
+        for future in concurrent.futures.as_completed(future_to_url):
+            character_url = future_to_url[future]
+            try:
+                character_info = future.result()
+                character_data.append(character_info)
+            except Exception as exc:
+                print(f'A requisição para {character_url} falhou: {exc}')
+                character_data.append(None)
+    return character_data
+
+
+def get_character_data_single(character_url):
+    response = requests.get(character_url)
+    if response.status_code == 200:
+        character_data = response.json()
+        return {
+            'name': character_data['name'],
+            'image': character_data['image'],
+            'id': character_data['id']
+        }
+    else:
+        return None

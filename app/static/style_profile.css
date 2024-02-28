@@ -89,10 +89,10 @@ header h1 {
 }
 
 .character-item img {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
+    width: 200px;
     height: auto;
     display: block;
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    margin: 0 auto;
     margin-bottom: 10px;
     border-radius: 50%;
     border: 2px solid #ff00c8;
