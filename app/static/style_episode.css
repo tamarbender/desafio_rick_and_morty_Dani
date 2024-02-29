@@ -140,6 +140,12 @@ nav ul li a:hover {
     border-radius: 50%;
     border: 2px solid rgb(255, 0, 200);
     box-shadow: 0 0 10px rgb(183, 0, 255);
+
+.character-item:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+   -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+      }
 }
 
 
