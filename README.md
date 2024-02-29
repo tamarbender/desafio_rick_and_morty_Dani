@@ -34,12 +34,12 @@ projeto/
 - Angela Filomena | [anbaptista](https://github.com/anbaptista/)
 - Daniele Ferreira Galvão | [DanieleFG](https://github.com/DanieleFG)
 - Indhira Viana Freire | [Indhira Viana](https://github.com/Indy-electro)
-- Manuele Maurício Lamenha
+- Manuele Maurício Lamenha | [Manu](https://github.com/Manu3052)
 - Millena Figueredo | [MildePaula](https://github.com/MildePaula)
 - Quesia De Araújo Santos | [quesia-araujo](https://github.com/quesia-araujo)
-- Siomara Mota
-- Tamar Bender
-- Yohanna Oliveira Cavalcanti
+- Siomara Mota | [siomara777](https://github.com/siomara777)
+- Tamar Bender | [tamarbender](https://github.com/tamarbender)
+- Yohanna Oliveira Cavalcanti | [8b1tz](https://github.com/8b1tz)
 
 ### Resolução dos Desafios:
 
@@ -73,16 +73,19 @@ python -m venv .venv
 ```
 
 ### Instale as dependências dentro do requirements.txt
+
 ```
 pip install -r requirements.txt
 ```
 
 ### Entre no diretório correto :D
+
 ```
 cd app
 ```
 
 ### Rode o Flask :D
+
 ```
 flask --app app run
 ```
