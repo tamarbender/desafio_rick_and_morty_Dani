@@ -28,7 +28,7 @@ projeto/
 └── requirements.txt
 ```
 
-### Membros da Squad:
+### _Membros da Squad:_
 
 - Ana Paula Martins Braga | [apmbraga](https://github.com/apmbraga)
 - Angela Filomena | [anbaptista](https://github.com/anbaptista/)
@@ -41,16 +41,16 @@ projeto/
 - Tamar Bender | [tamarbender](https://github.com/tamarbender)
 - Yohanna Oliveira Cavalcanti | [8b1tz](https://github.com/8b1tz)
 
-### Resolução dos Desafios:
+### _Resolução dos Desafios:_
 
 A resolução dos desafios foi realizada através de comunicação no Discord, reuniões no Google Meet e divisão de tarefas entre os membros da squad.
 
 - **21/02:** Primeira reunião para resolução de exercícios, definição de horários e divisão de tarefas.
 - **Até a data de entrega:** Comunicação contínua no Discord, troca de informações, esclarecimento de dúvidas e colaboração mútua.
 
-Valorizamos o trabalho em equipe e a criação de um ambiente cooperativo para garantir um aprendizado eficaz e uma experiência gratificante.
+Valorizamos o trabalho em equipe e a criação de um ambiente cooperativo para garantir um aprendizado eficaz e uma experiência gratificante para todas as participantes.
 
-### Como excutar:
+### _Como excutar:_
 
 ### Clonar o repositório
 
