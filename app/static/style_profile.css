@@ -58,7 +58,7 @@ a:hover {
 
 
 header {
-    background-color: #4d156b;
+    background-color: #222;
     padding: 20px 0;
     text-align: center;
 }
@@ -79,7 +79,7 @@ header h1 {
     padding: 20px;
     margin-top: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #000000;
+    background-color: #222;
     text-align: center;
 }
 

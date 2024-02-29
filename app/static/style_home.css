@@ -43,15 +43,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-.rick-morty-animation {
-    background-image: url('rick_and_morty_animation.gif');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-}
-
 header {
     background-color: #222;
     padding: 20px 0;
