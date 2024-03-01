@@ -77,3 +77,10 @@ def get_character_data_single(character_url):
         }
     else:
         return None
+
+def get_list_characters(page):
+    url = f"https://rickandmortyapi.com/api/character/?page={page}"
+    response = requests.get(url)
+    data = response.json()
+    character = data["results"]
+    return character, data["info"]["pages"]
