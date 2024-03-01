@@ -2,7 +2,8 @@ from flask import Flask, render_template, request
 
 from app.controller.controllers import (get_character_data, get_episode_by_id,
                                         get_episodes, get_list_characters_page,
-                                        get_location_by_id, get_locations)
+                                        get_location_by_id, get_locations,
+                                        get_list_characters)
 
 app = Flask(__name__)
 
@@ -42,6 +43,13 @@ def profile(id):
     response = get_list_characters_page(id)
     return render_template('profile.html', character=response)
 
+
+@app.route('/profiles')
+def profiles():
+    page = request.args.get('page', 1, type=int)
+    print(page)
+    response,  total_pages = get_list_characters(page)
+    return render_template('profiles.html', characters=response, current_page=page, total_pages=total_pages)
 
 @app.route('/')
 def home():
