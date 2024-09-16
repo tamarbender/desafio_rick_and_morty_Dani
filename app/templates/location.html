@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episode Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style_episode.css">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="container mt-4">
+        <h1>Detalhes da Localização - {{ location.name }}</h1>
+        <div>
+            <p><strong>Nome:</strong> {{ location.name }}</p>
+            <p><strong>Tipo:</strong> {{ location.type }}</p>
+            <p><strong>Dimensão:</strong> {{ location.dimension }}</p>
+            <br>
+            <h2>Residentes</h2>
+            <br>
+            <div class="character-grid">
+                {% for residents in residents_data %}
+                <div class="character-item">
+                    <a class="page-link" href="{{ url_for('profile', id=residents.id) }}"><img src="{{ residents.image }}" alt="{{ residents.name }}"></a>
+                    <p> {{ residents.name }} </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

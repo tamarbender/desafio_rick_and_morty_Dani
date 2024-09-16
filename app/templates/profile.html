@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_profile.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="container mt-4">
+        <h1>{{ character.name }}</h1>
+        <div class="character-item">
+            <p><strong>Gênero:</strong> {{ character.gender }}</p>
+            <p><strong>Status:</strong> <span class="character-status {% if character.status == 'Dead' %}Dead{% else %}Alive{% endif %}">{{ character.status }}</span></p>
+            <p><strong>Espécie:</strong> {{ character.species }}</p>
+            <br>
+            <img src="{{ character.image }}" class="img-fluid img-thumbnail"/>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

@@ -9,39 +9,17 @@
     <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/episodes">Episodes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Locations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Characters</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
+    {% include 'header.html' %}
     <div class="container mt-4">
         <div class="title-container">
-            <h1>List of Episodes</h1>
+            <h1>Lista de Episódios</h1>
         </div>
-        <img src="../static/images/rick.png" alt="Rick" class="character character-left">
-        <img src="../static/images/morty.png" alt="Morty" class="character character-right">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">NAME</th>
-                    <th scope="col">AIR DATE</th>
-                    <th scope="col">EPISODE CODE</th>
+                    <th scope="col">NOME</th>
+                    <th scope="col">LANÇAMENTO</th>
+                    <th scope="col">CÓDIGO DO EPISÓDIO</th>
                 </tr>
             </thead>
             <tbody>

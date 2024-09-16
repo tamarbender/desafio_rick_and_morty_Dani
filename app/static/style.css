@@ -33,13 +33,13 @@ body {
     height: auto;
 }
 
-.character-left {
-    left: 20px;
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 20px;
 }
 
-.character-right {
-    right: 20px;
-}
 
 .container {
     margin: 0 auto;
@@ -151,6 +151,15 @@ tr:hover {
     overflow-x: auto;
     max-width: 100%;
     border-radius: 50px;
+}
+
+.icon_visualizar {
+    text-align: center;
+    width: 20px;
+}
+.location-link {
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {

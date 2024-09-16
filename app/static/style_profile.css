@@ -26,9 +26,8 @@ body {
     }
 }
 
-
 a {
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -36,11 +35,6 @@ h1 {
     font-size: 36px;
     color: #fff;
     margin-bottom: 20px;
-}
-
-.episode-details {
-    margin-bottom: 20px;
-    color: #fff;
 }
 
 .nav-link:hover,
@@ -53,7 +47,7 @@ a:hover {
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
-    background-color: #4d156b;
+    background-color: #222;
     color: #fff;
     text-decoration: none;
 }
@@ -62,12 +56,6 @@ a:hover {
     background-color: #8531ac;
 }
 
-.character-image {
-    max-width: 100px;
-    max-height: 100px;
-    width: auto;
-    height: auto;
-}
 
 header {
     background-color: #222;
@@ -77,6 +65,51 @@ header {
 
 header h1 {
     font-size: 36px;
+}
+
+.mt-4 {
+    overflow-x: auto;
+    max-width: 100%;
+    border-radius: 50px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #222;
+    text-align: center;
+}
+
+.character-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.character-item img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid #ff00c8;
+    box-shadow: 0 0 10px #b700ff;
+}
+
+.character-status {
+    font-weight: bold;
+    color: #fff;
+}
+
+.character-status.Dead {
+    color: #ff0000
+}
+
+.character-status.Alive {
+    color: #00ff00;
 }
 
 nav {
@@ -102,51 +135,3 @@ nav ul li a {
 nav ul li a:hover {
     color: #fff;
 }
-
-.mt-4 {
-    overflow-x: auto;
-    max-width: 100%;
-    border-radius: 50px;
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 20px;
-    margin-top: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #333;
-    text-align: center;
-}
-
-.character-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-items: center;
-    gap: 20px;
-}
-
-
-.character-item {
-    padding: 10px;
-}
-
-.character-item img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    border: 2px solid rgb(255, 0, 200);
-    box-shadow: 0 0 10px rgb(183, 0, 255);
-}
-
-.character-item img:hover {
-    -ms-transform: scale(1.2);
-   -webkit-transform: scale(1.2); 
-    transform: scale(1.2); 
-      }
-
-
-
